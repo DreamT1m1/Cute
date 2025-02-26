@@ -1,26 +1,28 @@
-import customtkinter as ctk
 from buttons_functions.button_functions import *
-from images import sticker_intro
+from images import *
 
 
-def make_frame_main_frame(master):
+def make_menu_frame(master):
     return ctk.CTkFrame(
         master,
-        border_width=5,
-        border_color="#FF83C6",
-        fg_color="#FFC4E4",
-        width=200,
-        height=200
+        corner_radius=40,
+        border_width=3,
+        border_color="#fbdbde",
+        fg_color="#860C4D",
+        bg_color="#000001",
+        width=250,
+        height=680
     )
 
 
 def make_intro_frame(master):
     return ctk.CTkFrame(
         master,
-        width=624,
+        width=630,
         height=400,
-        border_width=0,
-        bg_color="#860C4D",
+        border_width=5,
+        border_color="#fbdbde",
+        bg_color="#f7b2b5",
         fg_color="#860C4D"
     )
 
@@ -28,7 +30,7 @@ def make_intro_frame(master):
 def make_about_text(master):
     return ctk.CTkTextbox(
         master.intro_frame,
-        width=624,
+        width=620,
         height=250,
         border_spacing=5,
         border_color="#FF80C4",
@@ -44,7 +46,11 @@ def make_intro_button(master):
         master.frame,
         text="О приложении",
         command=lambda: toggle_window(master.intro_frame),
-        bg_color="#f48d90"
+        fg_color="#b05a5e",
+        bg_color="#860C4D",
+        border_width=3,
+        border_color="#fbdbde",
+        image=about_icon
     )
 
 
@@ -53,7 +59,7 @@ def make_intro_sticker(master):
         master.intro_frame,
         text='',
         image=sticker_intro,
-        corner_radius=0,
+        corner_radius=25,
         bg_color="#860C4D",
         fg_color="#860C4D"
     )

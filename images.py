@@ -12,3 +12,9 @@ sticker_intro = CTkImage(
     dark_image=Image.open("images\\sticker_intro.jpg"),
     size=(100, 100)
 )
+
+about_icon = CTkImage(
+    light_image=Image.open("images\\about icon.png"),
+    dark_image=Image.open("images\\about icon.png"),
+    size=(20, 20)
+)

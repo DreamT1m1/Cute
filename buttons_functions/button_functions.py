@@ -7,6 +7,3 @@ def toggle_window(window: ctk.CTkTextbox | ctk.CTkLabel | ctk.CTkFrame):
     else:
         window.place_forget()
 
-
-def about_button():
-    print("About")

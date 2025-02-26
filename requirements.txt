@@ -1,3 +1,5 @@
 customtkinter~=5.2.2
 pillow~=11.1.0
 g4f~=0.4.7.4
+
+pywinstyles~=1.8

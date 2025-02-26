@@ -8,8 +8,8 @@ class AIChat:
     models = ['gpt-4o', 'gpt-4o-mini']
 
     @staticmethod
-    def generate_compliment() -> None:
-        user_message = "Сделай незаурядный милый комплимент девушке, не слишком наигранный."
+    def generate_compliment() -> str:
+        user_message = "Сделай не наигранный, не пошлый, не слишком банальный комплимент милой девушке"
 
         response = client.chat.completions.create(
             model= AIChat.models[0],
@@ -17,4 +17,5 @@ class AIChat:
             web_search=False
         )
 
-        print(response.choices[0].message.content)
+        return response.choices[0].message.content
+
