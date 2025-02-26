@@ -18,3 +18,9 @@ about_icon = CTkImage(
     dark_image=Image.open("images\\about icon.png"),
     size=(20, 20)
 )
+
+compliment_icon = CTkImage(
+    light_image=Image.open("images\\compliment.png"),
+    dark_image=Image.open("images\\compliment.png"),
+    size=(20, 20)
+)

@@ -6,4 +6,3 @@ def toggle_window(window: ctk.CTkTextbox | ctk.CTkLabel | ctk.CTkFrame):
         window.place(x=300, y=125)
     else:
         window.place_forget()
-

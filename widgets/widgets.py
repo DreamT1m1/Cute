@@ -63,3 +63,28 @@ def make_intro_sticker(master):
         bg_color="#860C4D",
         fg_color="#860C4D"
     )
+
+
+def make_compliment_frame(master):
+    return ctk.CTkFrame(
+        master,
+        width=630,
+        height=400,
+        border_width=5,
+        border_color="#fbdbde",
+        bg_color="#f7b2b5",
+        fg_color="#860C4D"
+    )
+
+
+def make_compliment_button(master):
+    return ctk.CTkButton(
+        master.frame,
+        text="Генератор комплиментов",
+        command=lambda: master.compliment_window.focus,
+        fg_color="#b05a5e",
+        bg_color="#860C4D",
+        border_width=3,
+        border_color="#fbdbde",
+        image=compliment_icon
+    )
