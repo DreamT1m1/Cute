@@ -7,7 +7,6 @@ def main():
     ctk.set_appearance_mode("dark")
 
     app = App()
-    bot = AIChat()
 
     app.mainloop()
 
