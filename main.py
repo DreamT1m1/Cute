@@ -1,9 +1,15 @@
 from gpt_model import *
-from app import *
+from models import *
 
 
-bot = AIChat()
-app = App()
+def main():
+    ctk.set_default_color_theme("dark-blue")
+    ctk.set_appearance_mode("dark")
+
+    app = App()
+
+    app.mainloop()
+
 
 if __name__ == "__main__":
-    app.mainloop()
+    main()
