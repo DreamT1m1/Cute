@@ -1,5 +1,5 @@
 from gpt_model import *
-from models.models import *
+from models import *
 
 
 def main():
@@ -10,6 +10,7 @@ def main():
     bot = AIChat()
 
     app.mainloop()
+
 
 if __name__ == "__main__":
     main()
