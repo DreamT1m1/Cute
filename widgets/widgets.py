@@ -81,8 +81,7 @@ def make_compliment_button(master):
     return ctk.CTkButton(
         master.frame,
         text="Генератор комплиментов",
-        # TODO configure this button function
-        command=lambda: master.compliment_window.focus,
+        command=lambda: open_toplevel(master, "compliment_window", "Комплименты от меня :)", window_type="compliment"),
         fg_color="#b05a5e",
         bg_color="#860C4D",
         border_width=3,

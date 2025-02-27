@@ -18,19 +18,20 @@ class App(ctk.CTk):
         self.bg = ctk.CTkLabel(self, image=bg, text='')
         self.bg.place(relheight=1, relwidth=1)
 
+        # Menu frame
         self.frame = make_menu_frame(self)
-
+        # App info button
         self.intro_button = make_intro_button(self)
-
+        # Intro frame
         self.intro_frame = make_intro_frame(self)
-
+        # Text inside intro frame
         self.about_text = make_about_text(self)
-
+        # Sticker inside intro frame
         self.intro_sticker = make_intro_sticker(self)
-
+        # Compliment button
         self.compliment_button = make_compliment_button(self)
-
-        self.compliment_window = ToplevelWindow("Комплименты от меня :)")
+        # Compliment TopLevel window
+        self.compliment_window = None
 
         # Place menu frame
         self.frame.place(x=20, y=20)
@@ -45,10 +46,3 @@ class App(ctk.CTk):
         self.intro_sticker.place(x=400, y=260)
         # Pack compliment button
         self.compliment_button.place(x=25, y=75)
-
-
-class ToplevelWindow(ctk.CTkToplevel):
-    def __init__(self, title, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.geometry("400x300")
-        self.title(title)
