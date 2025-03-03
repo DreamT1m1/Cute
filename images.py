@@ -26,7 +26,7 @@ compliment_icon = CTkImage(
 )
 
 compliment_window = CTkImage(
-    light_image=Image.open("images\\compliment_window.jpg"),
-    dark_image=Image.open("images\\compliment_window.jpg"),
+    light_image=Image.open("images\\compliment_window.png"),
+    dark_image=Image.open("images\\compliment_window.png"),
     size=(400, 300)
 )

@@ -88,3 +88,14 @@ def make_compliment_button(master):
         border_color="#fbdbde",
         image=compliment_icon
     )
+
+
+def make_compliment(master, compliment: str):
+    return ctk.CTkLabel(
+        master,
+        text=compliment,
+        width=300,
+        height=200,
+        padx=10,
+        pady=10
+    )
