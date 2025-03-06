@@ -1,7 +1,7 @@
 import pywinstyles
 from texts.texts import *
-import customtkinter as ctk
 from widgets.widgets import *
+from images import bg
 import os
 
 

@@ -1,8 +1,9 @@
-import customtkinter as ctk
 import os
+
+import widgets.widgets
 from images import *
 from random import choice
-from widgets.widgets import *
+import customtkinter as ctk
 
 
 def toggle_window(window: ctk.CTkTextbox | ctk.CTkLabel | ctk.CTkFrame):
@@ -36,16 +37,11 @@ def open_toplevel(master, top_level_window_name, window_title: str, window_type:
             with open("data\\compliments.txt", 'r', encoding='utf-8') as inp:
                 data = [line.strip() for line in inp.readlines()]
 
-            compliment_text = ctk.CTkLabel(
+            compliment = choice(data)
+
+            compliment_text = widgets.widgets.make_compliment(
                 master.__dict__[top_level_window_name],
-                text=choice(data),
-                corner_radius=30,
-                fg_color="#e99cae",
-                bg_color="#db839b",
-                text_color="#000000",
-                width=130,
-                height=180,
-                wraplength=110
+                compliment
             )
 
             compliment_text.place(relx=0.5, rely=0.5, anchor=ctk.CENTER)

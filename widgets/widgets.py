@@ -1,5 +1,6 @@
-from buttons_functions.button_functions import *
-from images import *
+import customtkinter as ctk
+from buttons_functions.button_functions import toggle_window, open_toplevel
+from images import about_icon, sticker_intro, compliment_icon
 
 
 def make_menu_frame(master):
@@ -94,8 +95,11 @@ def make_compliment(master, compliment: str):
     return ctk.CTkLabel(
         master,
         text=compliment,
-        width=300,
-        height=200,
-        padx=10,
-        pady=10
+        corner_radius=30,
+        fg_color="#e99cae",
+        bg_color="#db839b",
+        text_color="#000000",
+        width=130,
+        height=180,
+        wraplength=110
     )

@@ -1,4 +1,3 @@
-from gpt_model import *
 from models import *
 
 
